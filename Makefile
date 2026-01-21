@@ -12,6 +12,9 @@ run-cli:
 test:
 	uv run pytest
 
+test-cov:
+	uv run pytest --cov-report=html
+
 lint:
 	uv run ruff check .
 	uv run black --check .
