@@ -1,10 +1,19 @@
-.PHONY: install run-api run-cli test lint db-up db-down migration migrate
+.PHONY: install up down run-api run-cli test lint db-up db-down migration migrate logs
 
 install:
 	uv sync
 
+up:
+	docker compose up -d
+
+down:
+	docker compose down
+
 run-api:
-	uv run uvicorn src.main_api:app --reload
+	docker compose up api
+
+logs:
+	docker compose logs -f
 
 run-cli:
 	uv run python src/main_cli.py
