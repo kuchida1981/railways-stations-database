@@ -3,7 +3,7 @@ name = "railways-stations-database"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.14"
 dependencies = [
     "alembic>=1.18.1",
     "asyncpg>=0.31.0",
@@ -43,7 +43,7 @@ exclude_lines = [
 ]
 
 [tool.mypy]
-python_version = "3.11"
+python_version = "3.14"
 strict = true
 ignore_missing_imports = true
 
